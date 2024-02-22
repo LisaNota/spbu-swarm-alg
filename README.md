@@ -7,23 +7,19 @@ The objective of this project is to investigate the characteristics of swarm int
 The project consists of the following components:
 
 ### `Piece` Class:
-**Attributes**:
   - `curr_position`: Current position of the particle.
   - `local_best_position`: Best position of the particle.
   - `local_best_fitness`: Best fitness value of the particle.
   - `velocity`: Velocity of the particle.
-**Methods**:
   - `init_velocity(swarm)`: Initializes the velocity of the particle.
   - `next_iteration(swarm)`: Moves the particle to the next position.
   
 ### `Swarm` Class:
-**Attributes**:
   - `swarmsize`: Size of the swarm.
   - `minvalues`, `maxvalues`: Lower and upper bounds for search.
   - `curr_velocity_ratio`, `local_velocity_ratio`, `global_velocity_ratio`: Coefficients for velocity calculations.
   - `global_best_fitness`: Best fitness value found by the swarm.
   - `global_best_position`: Best position found by the swarm.
-**Methods**:
   - `create_swarm()`: Creates the swarm of particles.
   - `next_iteration()`: Moves each particle in the swarm.
   - `final_finc(position)`: Target function to minimize.

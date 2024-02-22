@@ -1,11 +1,9 @@
-#!/usr/bin/env python
-# coding: utf-8
-
 import numpy as np
 import tkinter as tk
 from tkinter import ttk
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import matplotlib.pyplot as plt
+
 
 class piece(object):
     """
@@ -73,9 +71,6 @@ class piece(object):
             swarm.flobal_best_fitness = final_finc
 
 
-# In[3]:
-
-
 class Swarm:
     """
     Класс роя частиц
@@ -134,15 +129,9 @@ class Swarm:
         return final_finc
 
 
-# In[4]:
-
-
 def inserted(place, num):
     place.delete(0, tk.END)
     place.insert(0, str(num))
-
-
-# In[5]:
 
 
 def creating():
@@ -198,9 +187,6 @@ def make_iterations(n):
                         font=("Arial", 10), fill="black")
 
 
-# In[20]:
-
-
 root = tk.Tk()
 root.title("Роевой интеллект для поиска минимума функции")
 root.geometry('800x450')
@@ -213,10 +199,6 @@ canvas.place(relx=0, rely=0.0)
 line1 = canvas.create_line(0, 180, 800, 180)
 line2 = canvas.create_line(350, 0, 350, 450)
 
-#########################
-
-#####    Рисунок    #####
-
 fig, ax = plt.subplots(figsize=(3.5, 2.5))
 ax.set_facecolor('white')
 ax.tick_params(axis='both', labelsize=8)
@@ -227,9 +209,6 @@ ax.set_title("Положение роя")
 
 canvas_widget = FigureCanvasTkAgg(fig, master=root)
 canvas_widget.get_tk_widget().place(relx=0.5, rely=0.42)
-
-
-##### Окно настроек #####
 
 lbl = tk.Label(root, text="Предварительные настройки", font=("Arial", 11) )
 lbl.place(relx=0.1, rely=0.01)
